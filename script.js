@@ -26,6 +26,7 @@ const typeController = (e) => {
   // Handle backspace press
   if (newLetter == "Backspace") {
     userText = userText.slice(0, userText.length - 1);
+    errorCount++;
     return display.removeChild(display.lastChild);
   }
 
@@ -124,7 +125,7 @@ const start = () => {
 };
 
 // START Countdown
-startBtn.addEventListener("click", start  );
+startBtn.addEventListener("click", start);
 
 // If history exists, show it
 displayHistory();
